@@ -1,0 +1,98 @@
+@mixin auto() {
+  margin: 0 auto;
+}
+
+@mixin position ($position:absolute, $top:50%, $left:50%, $transform:translate(-50%, -50%)) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: $transform;
+}
+
+@mixin font($family: false, $size: false, $colour: false, $weight: false, $line: false) {
+  @if $family {
+    font-family: $family;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $colour {
+    color: $colour;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $line {
+    line-height: $line;
+  }
+}
+
+@mixin linGradient($orientation, $start-color, $end-color) {
+  background-image: linear-gradient($orientation, $start-color, $end-color);
+}
+
+@mixin psel($display: block, $pos: absolute, $content: '') {
+  display: $display;
+  position: $pos;
+  content: $content;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin triangle($direction, $main-border-size, $side-border-size, $color) {
+  width: 0;
+  height: 0;
+
+  @if $direction==down {
+    border-left: $side-border-size solid transparent;
+    border-right: $side-border-size solid transparent;
+    border-top: $main-border-size solid $color;
+  }
+
+  @else if $direction==up {
+    border-left: $side-border-size solid transparent;
+    border-right: $side-border-size solid transparent;
+    border-bottom: $main-border-size solid $color;
+  }
+
+  @else if $direction==right {
+    border-top: $side-border-size solid transparent;
+    border-bottom: $side-border-size solid transparent;
+    border-left: $main-border-size solid $color;
+  }
+
+  @else if $direction==left {
+    border-top: $side-border-size solid transparent;
+    border-bottom: $side-border-size solid transparent;
+    border-right: $main-border-size solid $color;
+  }
+}
+
+$breakpoints: ("phone": 400px,
+"phablet": 560px,
+"tablet": 768px,
+"tablet-wide": 1024px,
+"desktop": 1248px,
+"desktop-wide": 1440px);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
