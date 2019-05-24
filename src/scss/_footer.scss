@@ -1,0 +1,132 @@
+.page-footer {
+
+  color: #fff;
+
+  .footer-nav {
+    background: url(../../assets/img/footer-photo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: $section-padding;
+
+      .col {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 1.8rem;
+
+        .col-title {
+          margin-bottom: 20px;
+          font-size: 2.5rem;
+          font-weight: normal;
+          text-transform: uppercase;
+
+        }
+
+        .footer-list {
+          list-style-type: none;
+        }
+
+        .footer-menu {
+          .footer-menu-item {
+            .footer-menu-link {
+              display: block;
+              padding: 5px 0;
+              text-decoration: none;
+              color: #fff;
+            }
+          }
+        }
+
+        .footer-contact {
+          .footer-contact-item {
+            padding: 5px 0;
+
+            i {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        .social-item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 20px;
+
+          i {
+            font-size: 40px;
+          }
+
+          .social-text {
+            margin-left: 20px;
+          }
+
+          .logo-wrapper {
+            width: 40px;
+
+            .logo {
+              width: 100%;
+            }
+          }
+        }
+
+      }
+
+      .social {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer-copyright-bar {
+    padding: 20px 10px;
+    background-color: #0a4988;
+
+    .wrapper {
+
+      .copyright {
+        text-align: center;
+        font-size: 1.6rem;
+
+        .copyright-link {
+          text-decoration: none;
+          color: #fff;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .page-footer {
+
+    .footer-nav {
+      .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 70px 30px;
+
+        .col {
+          text-align: left;
+
+          .social-item.company {
+            margin-bottom: 40px;
+
+            .social-text {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

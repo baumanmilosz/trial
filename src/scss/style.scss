@@ -1,3 +1,6 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
 *,
 *::after,
 *::before {
@@ -6,6 +9,332 @@
   box-sizing: border-box;
 }
 
+.wrapper {
+  max-width: 1300px;
+  @include auto();
+}
+
+.more-btn {
+  font-family: "Open Sans", sans-serif;
+  padding: 20px 30px;
+  border-radius: 30px;
+  border: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $section-size;
+  color: #111;
+  font-weight: normal;
+  text-align: center;
+
+  .square {
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: $main-color;
+  }
+}
+
 html {
   font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+
+  body {
+    @import "../scss/header";
+
+    .main-content {
+      .about {
+        padding: $section-padding;
+        text-align: center;
+
+        .wrapper {
+          .section-title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+          }
+
+          .section-content {
+            .section-img {
+              position: relative;
+              margin-bottom: 20px;
+
+              .section-shape,
+              .section-photo {
+                width: 100%;
+              }
+
+              .section-photo {
+                @include position();
+                padding: 0 20px;
+              }
+            }
+
+            .section-desc {
+              padding: 0 20px;
+
+              .section-desc-title {
+                font-size: 2rem;
+                color: #000;
+
+                .section-desc-subtitle {
+                  display: block;
+                  color: #888;
+                  font-size: 1.3rem;
+                  font-weight: normal;
+                }
+              }
+
+              .section-desc-paragraph {
+                margin: 20px 0;
+                font-size: 1.3rem;
+                color: #777;
+              }
+
+              .more-btn {
+                background-color: $main-color;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      .departure-banner {
+        height: 500px;
+        padding: 0 10px;
+        background: url(../../assets/img/banner.png) no-repeat;
+        background-size: cover;
+
+        .wrapper {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .content {
+            text-align: center;
+
+            .section-desc {
+              margin-bottom: 50px;
+              line-height: 40px;
+              font-size: 1.8rem;
+              color: #fff;
+
+              span {
+                display: block;
+                font-size: 2.5rem;
+              }
+            }
+
+            .more-btn {
+              background-color: #fff;
+              color: #222;
+            }
+          }
+        }
+      }
+
+      .offer {
+        padding: $section-padding;
+        text-align: center;
+
+        .wrapper {
+          .section-title {
+            position: relative;
+
+          }
+
+          .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+            .box {
+              background: url(../../assets/img/box-bar.png) no-repeat;
+              background-size: cover;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 50px 10px 30px;
+              margin: 30px 0;
+              width: 250px;
+              font-size: 1.5rem;
+              border-radius: 5px;
+              box-shadow: 3px 0 4px 2px rgba(0, 0, 0, 0.05);
+
+              .icon-circle {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 3px 0 4px 2px rgba(0, 0, 0, 0.05);
+
+                .fas {
+                  @include position();
+                  font-size: 4rem;
+                  color: #1859c3;
+                }
+              }
+
+              .box-title {
+                margin-bottom: 20px;
+                color: #111;
+              }
+
+              .box-desc {
+                padding: 0 20px;
+                color: #aaa;
+              }
+            }
+          }
+
+          .more-btn {
+            background-color: $main-color;
+            color: #fff;
+          }
+        }
+      }
+
+      @import "../scss/_footer";
+    }
+  }
+}
+
+@media (min-width:768px) {
+
+  .section-title {
+    font-size: 4rem;
+
+    .square {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  html {
+    body {
+      .main-content {
+
+        .about {
+
+          .wrapper {
+
+            .section-content {
+              display: flex;
+
+              .section-desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+
+                .more-btn {
+                  align-self: flex-end;
+                }
+              }
+            }
+          }
+        }
+
+        .offer {
+
+          .wrapper {
+            .section-content {
+              margin: 50px 0;
+            }
+
+            .more-btn {
+              background-color: $main-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:1024px) {
+  html {
+    body {
+      .main-content {
+        .about {
+          .wrapper {
+            .section-content {
+              display: flex;
+
+              .section-desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+
+                .section-desc-title {
+                  font-size: 3.2rem;
+
+                  .section-desc-subtitle {
+                    font-size: 1.9rem;
+                  }
+                }
+
+                .section-desc-paragraph {
+                  font-size: 1.9rem;
+                }
+
+
+
+                .more-btn {
+                  align-self: flex-end;
+                }
+              }
+            }
+          }
+        }
+
+        .departure-banner {
+        .wrapper {
+            .content {
+              .section-desc {
+                font-size: 2.5rem;
+                line-height: 60px;
+
+                span {
+                  display: block;
+                  font-size: 3.5rem;
+                }
+              }
+
+              .more-btn {
+                background-color: #fff;
+                color: #222;
+              }
+            }
+          }
+        }
+
+        .offer {
+
+          .wrapper {
+            .section-content {
+              margin: 50px 0;
+            }
+
+            .more-btn {
+              background-color: $main-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
