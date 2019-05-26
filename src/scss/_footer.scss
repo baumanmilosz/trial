@@ -1,5 +1,4 @@
 .page-footer {
-
   color: #fff;
 
   .footer-nav {
@@ -10,7 +9,7 @@
     .wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
       padding: $section-padding;
 
       .col {
@@ -43,17 +42,17 @@
 
         .footer-contact {
           .footer-contact-item {
-            padding: 5px 0;
+            padding: 10px 0;
 
             i {
-              margin-right: 20px;
+              margin-right: 10px;
             }
           }
         }
 
         .social-item {
           display: flex;
-          justify-content: flex-start;
+          justify-content: center;
           align-items: center;
           margin-bottom: 20px;
 
@@ -73,7 +72,6 @@
             }
           }
         }
-
       }
 
       .social {
@@ -107,7 +105,6 @@
 
 @media (min-width:768px) {
   .page-footer {
-
     .footer-nav {
       .wrapper {
         flex-direction: row;
@@ -117,6 +114,11 @@
 
         .col {
           text-align: left;
+          margin: 0;
+
+          .social-item {
+            justify-content: flex-start;
+          }
 
           .social-item.company {
             margin-bottom: 40px;

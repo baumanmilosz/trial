@@ -1,0 +1,33 @@
+.offer.offer-page {
+  .wrapper {
+    text-align: left;
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: $section-size;
+
+      &::before {
+        @include psel();
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: #1859c3;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .offer.offer-page {
+    .wrapper {
+      .section-content {
+        .box {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

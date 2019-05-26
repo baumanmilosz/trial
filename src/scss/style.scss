@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: $section-size;
+  font-size: 4rem;
   color: #111;
   font-weight: normal;
   text-align: center;
@@ -43,8 +43,10 @@
 html {
   font-size: 10px;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 
   body {
+    overflow-x: hidden;
     @import "../scss/header";
 
     .main-content {
@@ -77,6 +79,7 @@ html {
 
             .section-desc {
               padding: 0 20px;
+              text-align: center;
 
               .section-desc-title {
                 font-size: 2rem;
@@ -162,9 +165,12 @@ html {
               display: flex;
               flex-direction: column;
               align-items: center;
+              text-align: center;
               padding: 50px 10px 30px;
               margin: 30px 0;
               width: 250px;
+              max-width: 250px;
+              height: 400px;
               font-size: 1.5rem;
               border-radius: 5px;
               box-shadow: 3px 0 4px 2px rgba(0, 0, 0, 0.05);
@@ -203,16 +209,23 @@ html {
           }
         }
       }
-
-      @import "../scss/_footer";
     }
+
+    @import "../scss/about";
+    @import "../scss/offer";
+    @import "../scss/contact";
+    @import "../scss/detail";
+    @import "../scss/destination";
+
+    @import "../scss/_footer";
+
   }
 }
+
 
 @media (min-width:768px) {
 
   .section-title {
-    font-size: 4rem;
 
     .square {
       width: 35px;
@@ -223,11 +236,8 @@ html {
   html {
     body {
       .main-content {
-
         .about {
-
           .wrapper {
-
             .section-content {
               display: flex;
 
@@ -246,15 +256,9 @@ html {
         }
 
         .offer {
-
           .wrapper {
             .section-content {
               margin: 50px 0;
-            }
-
-            .more-btn {
-              background-color: $main-color;
-              color: #fff;
             }
           }
         }
@@ -270,14 +274,7 @@ html {
         .about {
           .wrapper {
             .section-content {
-              display: flex;
-
               .section-desc {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: left;
-
                 .section-desc-title {
                   font-size: 3.2rem;
 
@@ -289,48 +286,28 @@ html {
                 .section-desc-paragraph {
                   font-size: 1.9rem;
                 }
-
-
-
-                .more-btn {
-                  align-self: flex-end;
-                }
               }
             }
           }
         }
 
         .departure-banner {
-        .wrapper {
+          .wrapper {
             .content {
               .section-desc {
                 font-size: 2.5rem;
                 line-height: 60px;
-
-                span {
-                  display: block;
-                  font-size: 3.5rem;
-                }
-              }
-
-              .more-btn {
-                background-color: #fff;
-                color: #222;
               }
             }
           }
         }
 
         .offer {
+          padding: 100px 20px;
 
           .wrapper {
             .section-content {
               margin: 50px 0;
-            }
-
-            .more-btn {
-              background-color: $main-color;
-              color: #fff;
             }
           }
         }

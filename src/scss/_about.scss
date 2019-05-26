@@ -1,0 +1,85 @@
+.article-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 2rem;
+
+  &::before {
+    @include psel();
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #1859c3;
+  }
+}
+
+.article-desc {
+  font-size: 1.5rem;
+}
+
+.about {
+
+  .wrapper {
+    text-align: left;
+
+    .section-title {
+      font-size: 3em;
+      margin-bottom: 50px;
+      color: #000;
+      font-weight: normal;
+
+      .logo-wrapper {
+        width: 50px;
+        margin: 0 20px;
+
+        .logo {
+          width: 100%;
+        }
+      }
+    }
+
+    .about-us {
+      text-align: left;
+      margin-bottom: 100px;
+    }
+
+    .gallery {
+
+      .gallery-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 400px;
+        margin-top: 50px;
+
+        .tile-photo {
+          flex-basis: 21%;
+          display: block;
+
+          .photo {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    .wrapper {
+      .section-title {
+        font-size: 4rem;
+      }
+
+      .gallery {
+        .gallery-wrapper {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-content: space-between;
+        }
+      }
+    }
+  }
+}
