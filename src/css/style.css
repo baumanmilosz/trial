@@ -147,10 +147,6 @@ html body .page-header .page-nav .nav-list .nav-list-item .sub-list {
   display: none;
 }
 
-html body .page-header .page-nav .nav-list .nav-list-item:hover .sub-list {
-  display: block;
-}
-
 html body .page-header .page-nav .nav-list .sub-list {
   display: none;
 }
@@ -162,10 +158,6 @@ html body .page-header .page-nav .nav-list .sub-list .sub-list-item {
 
 html body .page-header .page-nav .nav-list .sub-list .sub-list-item .sub-list {
   display: none;
-}
-
-html body .page-header .page-nav .nav-list .sub-list .sub-list-item:hover .sub-list {
-  display: block;
 }
 
 html body .page-header .page-nav.opened .nav-bar .menu-icon .close-icon {
@@ -395,6 +387,9 @@ html body .page-header .slick-dots li.slick-active button {
     padding: 10px;
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  html body .page-header .page-nav .nav-list .sub-list .sub-list-item:hover .sub-list {
+    display: block;
   }
   html body .page-header .page-nav .nav-list .sub-list .sub-list-item .sub-list {
     display: none;

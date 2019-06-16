@@ -71,9 +71,9 @@
        .sub-list {
           display: none;
         }
-        &:hover .sub-list {
-          display: block;
-        }
+        // &:hover .sub-list {
+        //   display: block;
+        // }
       }
       .sub-list {
         display: none;
@@ -83,9 +83,9 @@
           .sub-list {
             display: none;
           }
-          &:hover .sub-list {
-            display: block;
-          }
+          // &:hover .sub-list {
+          //   display: block;
+          // }
         }
       }
     }
@@ -316,6 +316,9 @@
             padding: 10px;
             border: none;
             border-top: 1px solid rgba(0, 0, 0, .1);
+            &:hover .sub-list {
+              display: block;
+            }
             .sub-list {
               display: none;
             }
