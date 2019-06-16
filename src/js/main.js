@@ -14,6 +14,19 @@ const checkMedia = (e) => {
 }
 desktop.addListener(checkMedia);
 
+// SLIDER
+$('.slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
+  dots: false,
+  autoplay: true,
+  autoplaySpeed: 5000,
+});
+
+
 // LIGHT GALLERY
 
 $('#aniimated-thumbnials').lightGallery({

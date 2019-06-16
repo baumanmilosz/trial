@@ -1,6 +1,9 @@
 @import "_mixins.scss";
 @import "_variables.scss";
-
+:root {
+  --nav-item-height: 48px;
+  --nav-item-margin: 15px;
+}
 *,
 *::after,
 *::before {

@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Kravko Travel</title>
+  <link rel="icon" href="./favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap&subset=latin-ext" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-
+  <link rel="stylesheet" href="./vendor/slick/slick.css">
   <link rel="stylesheet" href="./src/css/style.css" />
 </head>
 
@@ -41,7 +42,46 @@
           <a href="./src/pages/offer.html" class="nav-list-link">Nasza oferta</a>
         </li>
         <li class="nav-list-item">
-          <a href="./src/pages/destination.html" class="nav-list-link">Miejsca</a>
+          <a href="#" class="nav-list-link">Miejsca</a>
+          <ul class="sub-list nav-list">
+            <li class="sub-list-item nav-list-item">
+              <a href="#" class="sub-list-link nav-list-link">Polska ></a>
+              <ul class="sub-list nav-list sub-list-2">
+                <li class="sub-list-item nav-list-item">
+                  <a href="#" class="sub-list-link nav-list-link">Warszawa</a>
+                </li>
+                <li class="sub-list-item nav-list-item">
+                  <a href="#" class="sub-list-link nav-list-link">Kraków - Zakopane</a>
+                </li>
+                <li class="sub-list-item nav-list-item">
+                  <a href="#" class="sub-list-link nav-list-link">Gdańsk - Malbork</a>
+                </li>
+                <li class="sub-list-item nav-list-item">
+                  <a href="#" class="sub-list-link nav-list-link">Wrocław</a>
+                </li>
+                <li class="sub-list-item nav-list-item">
+                  <a href="#" class="sub-list-link nav-list-link">Katowice</a>
+                </li>
+                <li class="sub-list-item nav-list-item">
+                  <a href="#" class="sub-list-link nav-list-link">Mazury</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sub-list-item nav-list-item">
+              <a href="#" class="sub-list-link nav-list-link">Ukraina ></a>
+            <ul class="sub-list nav-list sub-list-2">
+              <li class="sub-list-item nav-list-item">
+                <a href="#" class="sub-list-link nav-list-link">Lwów</a>
+              </li>
+              <li class="sub-list-item nav-list-item">
+                <a href="#" class="sub-list-link nav-list-link">Truskawiec</a>
+              </li>
+              <li class="sub-list-item nav-list-item">
+                <a href="#" class="sub-list-link nav-list-link">Bukowel</a>
+              </li>
+            </ul>
+            </li>
+          </ul>
         </li>
         <li class="nav-list-item">
           <a href="#" class="nav-list-link">Dziedzictwo żydowskie</a>
@@ -54,18 +94,36 @@
         </li>
       </ul>
     </nav>
-    <div class="main-banner">
-      <div class="shape">
-        <h2 class="main-banner-title">
-          Odkryj świat z KrawkoTrvel
-        </h2>
-        <p class="main-banner-desc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique,
-          minus eos sapiente culpa molestiae incidunt quas sint corporis odio
-          ab.
-        </p>
+    <div class="slider">
+      <div class="main-banner">
+        <div class="shape">
+          <h2 class="main-banner-title">
+            Odkryj świat z KrawkoTrvel
+          </h2>
+          <p class="main-banner-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique,
+            minus eos sapiente culpa molestiae incidunt quas sint corporis odio
+            ab.
+          </p>
+        </div>
+      </div>
+      <div class="main-banner">
+        <div class="shape">
+          <h2 class="main-banner-title">
+            Odkryj świat z KrawkoTrvel
+          </h2>
+          <p class="main-banner-desc">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique,
+            minus eos sapiente culpa molestiae incidunt quas sint corporis odio
+            ab.
+          </p>
+        </div>
       </div>
     </div>
+    <!-- <div class="slider-controls">
+      <button class="arrow left-arrow prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="arrow right arrow next"><i class="fas fa-chevron-right"></i></button>
+    </div> -->
   </header>
   <main class="main-content">
     <section class="about">
@@ -233,6 +291,9 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./vendor/slick/slick.min.js"></script>
+
   <script src="./src/js/main.js"></script>
 </body>
 
