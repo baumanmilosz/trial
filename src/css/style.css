@@ -156,8 +156,16 @@ html body .page-header .page-nav .nav-list .sub-list .sub-list-item {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-html body .page-header .page-nav .nav-list .sub-list .sub-list-item .sub-list {
+html body .page-header .page-nav .nav-list .sub-list .sub-list-item .sub-list-2 {
   display: none;
+}
+
+html body .page-header .page-nav .nav-list .sub-list .sub-list-item .sub-list-2.opened {
+  display: block;
+}
+
+html body .page-header .page-nav .nav-list .sub-list.opened {
+  display: block;
 }
 
 html body .page-header .page-nav.opened .nav-bar .menu-icon .close-icon {

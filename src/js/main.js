@@ -6,16 +6,33 @@ menuIcon.addEventListener('click', () => {
 
 const subNavItem = document.querySelectorAll('.nav-list-item');
 
+// DROPDOWN ELEMENTS IN MAIN NAV-LIST
 subNavItem.forEach(el => {
   el.addEventListener('click', () => {
-    const children = Array.from(el.children);
+    const children = [...el.children];
     children.forEach(child => {
-      if(child.classList.contains('sub-list'))
-      child.style.display='block';
+      if(child.classList.contains('sub-list')) {
+        document.querySelector('.sub-list').classList.toggle('opened');
+      }
     })
   })
 })
+//
 
+// DROPDOWN ELEMENTS IN SUB-NAV-LIST
+const subListItems = document.querySelectorAll('.sub-list-item');
+subListItems.forEach(el => {
+  el.addEventListener('click', () => {
+    const subList = [...el.children];
+
+    subList.forEach(el => {
+      if(el.classList.contains('sub-list-2')) {
+        el.classList.toggle('opened');
+      }
+    })
+})
+})
+//
 
 const desktop = window.matchMedia("(min-width: 1024px)");
 const checkMedia = (e) => {

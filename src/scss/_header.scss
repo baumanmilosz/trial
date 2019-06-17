@@ -71,21 +71,21 @@
        .sub-list {
           display: none;
         }
-        // &:hover .sub-list {
-        //   display: block;
-        // }
       }
       .sub-list {
         display: none;
         .sub-list-item {
           border: none;
           border-top: 1px solid rgba(0, 0, 0, .1);
-          .sub-list {
+          .sub-list-2 {
             display: none;
+            &.opened {
+              display: block;
+            }
           }
-          // &:hover .sub-list {
-          //   display: block;
-          // }
+        }
+        &.opened {
+          display: block;
         }
       }
     }
